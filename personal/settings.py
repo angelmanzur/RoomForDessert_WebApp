@@ -33,12 +33,12 @@ ALLOWED_HOSTS = ['https://leaveroomfordessert.appspot.com',
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 # STATIC_URL = '/static/'
-# STATIC_URL = 'https://storage.googleapis.com/www.creatingdesserts.com/static/'
-STATIC_URL = 'https://storage.googleapis.com/www.creatingdesserts.com/static/'
+
+STATIC_URL = 'https://storage.googleapis.com/<GOOGLE_BUCKET_STORAGE>/static/'
 STATIC_ROOT = 'static/'
 
 DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-GS_BUCKET_NAME = 'www.creatingdesserts.com'
+GS_BUCKET_NAME = '<GOOGLE_BUCKET_STORAGE>'
 #import word index from pickle file
 
 # Application definition

@@ -23,7 +23,7 @@ resources:
   cpu: 1
   memory_gb: 0.5
 env_variables:
-  CLOUD_STORAGE_BUCKET: 'www.creatingdesserts.com'
-  STATIC_URL: 'https://storage/googleapis.com/www.creatingdesserts.com/static/'
+  CLOUD_STORAGE_BUCKET: '<BUCKET_NAME>'
+  STATIC_URL: 'https://storage/googleapis.com/<BUCKET_NAME>/static/'
 
 # [END django_app]

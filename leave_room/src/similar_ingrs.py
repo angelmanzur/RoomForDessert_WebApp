@@ -204,7 +204,7 @@ def find_similar_words(word):
         buf = io.BytesIO()
         plt.savefig(buf, format='png')
         client = storage.Client(project='leaveroomfordessert')
-        bucket = client.bucket('www.creatingdesserts.com')
+        bucket = client.bucket('<BUCKET_NAME>')
         figname = 'similar_to_{}.png'.format(word)
         figname = 'similar_to_map.png'
         blob = bucket.blob('static/{}'.format(figname))
