@@ -1,0 +1,1 @@
+web: gunicorn leave_room.wsgi --preload --timeout=40
