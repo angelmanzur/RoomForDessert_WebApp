@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block styles%}
+<style>
+    body{
+        border-top: 4px  solid #ffbf00;
+        
+        background: url("{% static 'flan.jpg' %}") no-repeat center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      
+    }
+
+</style>
+
+
+<body>
+    <div class="container" style="text-align:center; padding: 20px">
+            <footer>
+                <p> Leave Room for Dessert 2019</p>
+            </footer>
+    </div>
+
+</body>
+
+{% endblock %}
+
+<!-- {% block counter %} -->

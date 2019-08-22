@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %} 
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Leave Room for Dessert</title>
+
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+ <style> 
+	
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #01579b;
+  border: none;
+  color: white;
+  padding: 14px 128px;
+  text-decoration: none;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+</style>
+
+</head>
+
+
+<body>
+  <nav class="grey" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="material-icons">home</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        
+        <h1 style="background-color:DodgerBlue;" class="header center text-lighten-2">Leave Room for Dessert</h1>
+        <div class="row center">
+          <h3 class="header col s12 light">Find out what dessert to make tonight</h3>
+        </div>
+        <!--
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+        </div> -->
+
+      </div>
+      <div class="parallax"><img src="{% static "flan.png" %}" alt="Unsplashed background img 1"></div>
+    </div>
+    
+    <div class="container">
+    <div class="section">
+    <div>
+      <form action="ingredient/" method="GET">
+
+        <h5 for="ingredient">Type an ingredient: </h5>
+        <input id="ingredient" type="text" name="ingredient"><br>
+        <input type="submit" value="Find a Match">
+      </form>
+    </div>
+    </div>
+  </div>
+
+<div class="container">
+    <div class="section">
+    	<div class="row center">
+          <h3 class="header col s12 light">Predict a dessert</h3>
+        </div>
+             <div>
+        	<form action="ingr_list/" method="GET">
+	
+  			<label for="ingr_list">Type a list of ingredient: </label>
+  			<input id="ingr_list" type="text" name="ingr_list"><br>
+  			<input type="submit" value="Find a dessert type">
+			</form>
+        </div>
+    </div>
+</div>
+<!-- </div> -->
+
+   <div class="container">
+    <div class="section">
+
+     
+
+
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">home</i></h2>
+            <h5 class="center">Speeds up development</h5>
+
+            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">User Experience Focused</h5>
+
+            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Easy to work with</h5>
+
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<br>
+<br>
+<!--
+<legend> Find a similar ingredient <legend>
+<form action="ingredient/" method="GET">
+	
+  	<label for="ingredient">Ingredient: </label>
+  	<input id="ingredient" type="text" name="ingredient"><br>
+  	<input type="submit" value="Find a Match">
+</form>
+
+-->
+
+
+
+</body>
+
+
+
+{% endblock %}

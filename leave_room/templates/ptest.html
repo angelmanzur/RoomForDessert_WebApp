@@ -1,0 +1,27 @@
+<head>
+{% extends "base.html" %}
+
+{% block page_content %} 
+
+<head>
+
+<html>
+<body onload="myFunction()">
+	<h1>This is a match test for  <strong>{{ ingredient }}</strong> </h1>
+<br>
+<br>
+<legend> Add an ingredient <legend>
+<form action="/ptest.py">
+  Ingredient: <input type="text" name="ingredient"><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+
+
+
+</body>
+<h1>This is a python test! </h1>
+
+</html>
+{% endblock %}

@@ -1,0 +1,51 @@
+<head>
+				{% extends "base.html" %}
+				{% load static %}
+				{% block page_content %} 
+				<title>Predicting dessert</title>
+			 </head>
+			 <html>
+			 <body>
+
+			   <nav class="white" role="navigation">
+                <div class="nav-wrapper container" >
+                
+                <a style='color:black' href="../"  class="previous" >Home</a>
+                <ul class="right">
+                    <li><a style='color:black' href="https://github.com/angelmanzur/Room_for_dessert">Github</a></li>
+                </ul>
+                </div>
+            </nav>			
+			  <div id='index-banner'>
+		<div>
+			<div class='container'> <h2> You should try to make:<strong>{{ dessert }}</strong> </h2>
+			<p style="font-size:140%;">This decision was made after learning on +85,000 dessert recipes. 
+			The recipes have an average of 13 ingredients, but some may have more than 40 
+			ingredients (think wedding cakes). The table below shows the probabilties for each dessert predicted.</p> <div class="container">   
+		</div>
+    	<div class="container">
+      		<div class="section">
+      		</div>
+    	</div>   
+  		</div> 
+    	<div class='section white'>
+    	<div class="row"> 
+           <div class="col s4 offset-s4">
+        
+        	<table class="highlight"> 
+        		<thead>
+        			<tr>
+        				<th> Dessert type </th>
+        				<th> Probability </th>
+        			</tr>
+        		</thead>
+        		<tbody>
+				{% for result in results %}
+                            <tr><td>{{ result.0 }}</td><td>{{ result.1 }}</td> </tr>
+                {% endfor %}
+				</tbody> 	
+			</table> 
+		</div>
+</div></div></div></body>
+    	</html>
+    	{% endblock %}

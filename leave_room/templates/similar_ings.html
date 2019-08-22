@@ -1,0 +1,67 @@
+<head>
+    {% extends "base.html" %}
+    {% load static %}
+    {% block page_content %} 
+
+    <title>Similar ingredients</title>
+
+</head>
+
+<html>
+	<body>
+
+        <nav class="white" role="navigation">
+            <div class="nav-wrapper container" >
+                
+                <a style='color:black' href="../"  class="previous" >Home</a>
+                    <ul class="right">
+                        <li><a style='color:black' href="https://github.com/angelmanzur/Room_for_dessert">Github</a></li>
+                    </ul>
+            </div>
+        </nav>
+		<div id='index-banner'>
+            <div> 
+                <div class='container'>
+                    <h1 style='color:#3d0e06;'> Matching ingredients for <strong>{{ ingredient}}</strong> </h1> 
+                    <p style="font-size:140%;">The table below shows the  'closest' ingrdients, defined by the similarity score. 
+    The plot shows a 2D representation of such ingredients. In the model each ingredient is represented by a 50 dimension vector.
+                    </p> 
+                </div> 
+            </div> <br> 
+            <div class="container">   
+            </div>
+            <div class="container">
+                <div class="section">
+                </div>
+            </div>   
+        </div> 
+    
+    
+        <div class='section white'>
+    	    <div class="row"> 
+                <div class="col s3"> <!-- list -->
+        
+        	    <table class="highlight"> 
+        		    <thead>
+        			    <tr>
+        				    <th> Ingredient </th>
+        				    <th> Similarity Score </th>
+        			    </tr>
+        		    </thead>
+                    <tbody>                      
+                        {% for sim_ings in ings_list %}
+                            <tr><td>{{ sim_ings.0 }}</td><td>{{ sim_ings.1 }}</td> </tr>
+                        {% endfor %}
+                    </tbody> 
+                </table> 
+            </div>
+
+            <div class="col s9"> 
+                <img src="{% static "similar_to_map.png" %}"
+                    alt="2-D plot showing similar ingredients">
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
+{% endblock %}

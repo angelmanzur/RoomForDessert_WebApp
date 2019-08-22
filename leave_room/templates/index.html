@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %} 
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Leave Room for Dessert</title>
+
+  
+ <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+ <style> 
+	/* body{ */
+    /* border-top: 4px  solid #ffbf00; */
+    
+    /* background: url("{% static 'flan.jpg' %}") no-repeat center fixed; */
+    /* -webkit-background-size: cover; */
+    /* -moz-background-size: cover; */
+    /* -o-background-size: cover; */
+    /* background-size: cover; */
+   
+  /* } */
+  input[type=button], input[type=submit], input[type=reset] {
+    background-color: #3d0e06;
+    border: none;
+    color: white;
+    padding: 14px 128px;
+    text-decoration: none;
+    margin: 2px 2px;
+    cursor: pointer;
+  }
+</style>
+
+</head>
+
+
+<body>
+  
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a  href="#" >Home</a>
+      <ul class="right">
+        <li><a href="https://github.com/angelmanzur/Room_for_dessert">Github</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+  <!-- <div class="parallax-container">
+    <div class="parallax"><img src="{% static "flan.jpg" %}"></div> -->
+  <!-- </div> -->
+  <!-- <div id="index-banner"></div> class="parallax"> -->
+  <div id="index-banner">
+    <div> 
+      <div class="container">
+        
+        <h1 class="header center text-lighten-2">Leave Room for Dessert</h1>
+        <div class="row center">
+          <h2 class="header col s12 light">Find out what dessert to make tonight</h2>
+        </div>
+        <!--
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+        </div> -->
+        <p style="font-size:180%;">Use the power of Machine Learning and +85,000 recipes to find matching 
+          dessert ingredients or predict what type of dessert to make.  <strong>BAKE!</strong></p>
+      </div>    
+    </div>
+    
+<div class="container">   
+  </div>
+    <div class="container">
+      <div class="section">
+      </div>
+    </div>   
+  </div> 
+
+  <div class="section white">
+    <div class="row container">
+        <h3 class="header">Give it a try!</h3>
+
+        <div class="container">
+            <div class="section">
+              <div>
+                <form action="ingredient/" method="GET">
+        
+                  <h5 for="ingredient">Type an ingredient (singular please): </h5>
+                  <input id="ingredient" type="text" name="ingredient"><br>
+                  <input type="submit" value="Find a Match">
+                </form>
+              </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section">
+              <div>
+                <form action="ingr_list/" method="GET">
+        
+                  <h5 for="ingr_list">Type some ingredients (comma separated): </h5>
+                  <input id="ingr_list" type="text" name="ingr_list"><br>
+                  <input type="submit" value="Find the type of dessert you could make">
+                </form>
+              </div>
+            </div>
+        </div>
+
+
+
+    </div>
+  </div>
+  <br>
+</div>
+
+
+
+</body>
+
+
+
+{% endblock %}
