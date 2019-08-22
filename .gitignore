@@ -114,3 +114,6 @@ data
 
 # static files
 /static
+
+# ignore secret_key
+*.secret_key
